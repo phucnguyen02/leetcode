@@ -1,5 +1,7 @@
 class Solution:
     def searchInsert(self, nums, target: int) -> int:
+        if target > nums[-1]: return len(nums)
+        if target <= nums[0]: return 0
         l = 0
         r = len(nums)
         while l < r:
