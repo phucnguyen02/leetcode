@@ -1,5 +1,3 @@
-from time import *
-
 class BinarySearch:
     def __init__(self, k):
         self.k = k
