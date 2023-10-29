@@ -29,6 +29,7 @@ if __name__ == "__main__":
 #Store the first elements of the k sets into a priority queue of size k using a tuple (elem, set_id, set_index)
 #Elem being the element in each set, set_id being the current set number, and set_index being the index of the element in that set
 #Pop the heap and store that element into the result array, increment the set_index of the corresponding set and insert the next element of that set
+#TC is O(klogk)
 
 # For i = 0, ..., k - 1
 # Push the first element of k sets into the priority queue as (set[i], i, 0).
