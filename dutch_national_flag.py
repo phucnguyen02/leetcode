@@ -20,6 +20,7 @@ if __name__ == "__main__":
     print(sol.dutch_national_flag([1, 5, 4, 3, 9, 0], 10))
     print(sol.dutch_national_flag([1, 5, 4, 3, 9, 0], -1))
     print(sol.dutch_national_flag([1], 1))
+    print(sol.dutch_national_flag([], 1))
 
 #Have it so that we have 2 counters going from the start of the array for swapping numbers smaller than the pivot,
 #and the end of the array backwards for swapping numbers smaller than the pivot.
