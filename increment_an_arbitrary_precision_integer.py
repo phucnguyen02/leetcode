@@ -1,5 +1,6 @@
 class Solution:
     def increment_arbitrary_interger(self, num):
+        if not num: return []
         spare = 1
         for i in range(len(num) - 1, -1, -1):
             spare, num[i] = divmod(num[i] + spare, 10)
