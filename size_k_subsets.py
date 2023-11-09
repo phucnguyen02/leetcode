@@ -1,10 +1,11 @@
 class Solution:
-    def power_set(self, nums):
-        if not nums: return [[]]
+    def size_k_subsets(self, nums, k):
+        if not k: return [[]]
+        if not nums: return []
         n = len(nums)
         res = []
         def backtracking(first = 0, arr = []):
-            if len(arr) == max_len:
+            if len(arr) == k:
                 res.append(arr[:])
                 return
             for i in range(first, n):
@@ -12,18 +13,17 @@ class Solution:
                 backtracking(i + 1, arr)
                 arr.pop()
 
-        for max_len in range(n+1):
-            backtracking()
+        backtracking()
         return res
 
         
 
 if __name__ == "__main__":
     sol = Solution()
-    print(sol.power_set([1,2,3]))
-    print(sol.power_set([1,2,3,4]))
+    print(sol.size_k_subsets([1,2,3, 4], 2))
+    print(sol.size_k_subsets([1,2,3], 0))
+    print(sol.size_k_subsets([], 10))
 
-# The max length of a subset can be anywhere from 0 to n.
 # Backtrack by selecting each element as the start of the subset,
 # then iterate through the rest of the elements of the array,
 # appending and removing from the subset accordingly.
@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
 # res = []
 # backtrack(first, arr):
-#   if len(arr) == max_len:
+#   if len(arr) == k:
 #       append arr into res
 #       return
 #   for i = first, ..., n
@@ -39,7 +39,6 @@ if __name__ == "__main__":
 #       backtrack(i + 1, arr)
 #       remove nums[i] from arr
 #
-# for max_len = 0, ..., n:
-#   backtrack(i, [])
+# backtrack(0, [])
 # 
 # return res
