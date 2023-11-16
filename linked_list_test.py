@@ -7,6 +7,15 @@ class LinkedList:
     def __init__(self, node):
         self.head = node
 
+    def get_length(self):
+        if not self.head: return 0
+        cur = self.head
+        res = 0
+        while cur:
+            res += 1
+            cur = cur.next
+        return res
+    
     def print_linked_list(self):
         arr = []
         cur = self.head
