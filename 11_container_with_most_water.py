@@ -18,4 +18,7 @@ if __name__ == "__main__":
     print(sol.maxArea([1,1]))
 
 
-
+# Have 2 pointers at the start and end.
+# Move the pointer with the smaller height because that way, we can only maximize the area.
+# Water = (right - left) * min(height[left], height[right])
+# Maximize water
