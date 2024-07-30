@@ -17,7 +17,7 @@ class Solution:
 
     def nonSpecialCount(self, l: int, r: int) -> int:
         self.primes = defaultdict(bool)
-        self.SieveOfEratosthenes(int(sqrt(r)))
+        self.sieve_of_eratosthenes(int(sqrt(r)))
         
         res = r - l + 1
         for prime in self.primes:
