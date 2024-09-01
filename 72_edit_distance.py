@@ -37,6 +37,7 @@ if __name__ == "__main__":
     print(sol.minDistance("", "ros"))
     print(sol.minDistance("horse", "ros"))
     print(sol.minDistance("intention", "execution"))
+    print(sol.minDistance("this is a test", "wokka wokka!!!"))
 
 # Variables: dp(i, j) being the minimum number of operations to turn word1 into word2 up to indices j for word1 and i for word2.
     
