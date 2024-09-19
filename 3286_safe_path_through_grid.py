@@ -1,5 +1,3 @@
-from collections import deque
-
 class Solution:
     def findSafeWalk(self, grid, h: int) -> bool:
         m = len(grid)
@@ -22,7 +20,6 @@ class Solution:
             vis[x][y] = 0
             return memo[(x,y,res)]
         a = dfs(0,0,0)
-        print(memo)
         return a-h<0
 
 if __name__ == "__main__":
