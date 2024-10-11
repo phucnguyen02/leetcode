@@ -12,7 +12,7 @@ class Solution:
 
     def pickIndex(self) -> int:
         if len(self.pref_sum) == 1: return 0
-        rand = randrange(0, self.sum - 1)
+        rand = randrange(0, self.sum)
         return bisect_right(self.pref_sum, rand)        
 
 
