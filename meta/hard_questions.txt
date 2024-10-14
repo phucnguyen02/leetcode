@@ -4,3 +4,5 @@
 31. Next Permutation
 162. Find Peak Element
 480. Sliding Window Median
+5. Longest Palindromic Substring
+138. Copy List with random pointer
