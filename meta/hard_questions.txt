@@ -1,0 +1,6 @@
+15. 3Sum
+227. Basic Calculator 2
+670. Maximum Swap
+31. Next Permutation
+162. Find Peak Element
+480. Sliding Window Median

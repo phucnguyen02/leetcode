@@ -11,7 +11,6 @@ class Solution:
             j = len(nums) - 1
             while nums[j] <= nums[i]:
                 j -= 1
-            print(j)
             nums[i], nums[j] = nums[j], nums[i]
         start = i + 1
         end = len(nums) - 1

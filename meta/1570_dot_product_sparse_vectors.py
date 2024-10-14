@@ -9,7 +9,7 @@ class SparseVector:
     def dotProduct(self, vec: 'SparseVector') -> int:
         ptr1 = ptr2 = 0
         res = 0
-        while ptr1 < len(self.nonzeros) and ptr2 < len(vec):
+        while ptr1 < len(self.nonzeros) and ptr2 < len(vec.nonzeros):
             if self.nonzeros[ptr1][0] == vec.nonzeros[ptr2][0]:
                 res += self.nonzeros[ptr1][1] * vec.nonzeros[ptr2][1]
                 ptr1 += 1
