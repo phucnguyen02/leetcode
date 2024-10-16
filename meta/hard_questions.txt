@@ -6,3 +6,9 @@
 480. Sliding Window Median
 5. Longest Palindromic Substring
 138. Copy List with random pointer
+1371. Longest Substring with even number of vowels
+523. Continuous Subarray Sum
+525. Contiguous Array
+864. Shortest Path to get all Keys
+57. Insert Interval
+143. Reorder List
