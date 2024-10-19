@@ -3,12 +3,11 @@ class Solution:
         n = len(prices)
         if n == 1: return 0
         if n == 2: return max(0, prices[1] - prices[0])
-        dp = [0]*n
+        res = 0
         for i in range(1, n):
-            dp[i] = dp[i-1]
             if prices[i] > prices[i-1]:
-                dp[i] += (prices[i] - prices[i-1])
-        return dp[-1]
+                res  += (prices[i] - prices[i-1])
+        return res
     
 if __name__ == "__main__":
     sol = Solution()

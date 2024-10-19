@@ -25,3 +25,9 @@ if __name__ == "__main__":
     # print(sol.validWordAbbreviation("apple", "a2e"))
     print(sol.validWordAbbreviation("internationalization", "i5a11o1"))
 
+
+# Iterate through the abbreviation because it might be longer than the word. Have 2 pointers for the word and the abbreviation.
+# If ptr2 is a digit then keep track of the number formed by the digits. If the number starts at 0 then it's invalid.
+# Add that number to ptr1
+# If ptr1 exceeds the word length before ptr2 finishes or the letters at the indices don't match then return false. Otherwise increment both.
+# We return whether we've reached the end of the word exactly

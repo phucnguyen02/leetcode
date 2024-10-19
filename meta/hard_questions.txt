@@ -14,3 +14,5 @@
 143. Reorder List
 282. Expression Add Operators
 33. Search In Rotated Sorted Array
+408. Valid Word Abbreviation
+42. Trapping Rain Water
