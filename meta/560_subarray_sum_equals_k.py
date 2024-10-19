@@ -17,3 +17,7 @@ if __name__ == "__main__":
     sol = Solution()
     print(sol.subarraySum([1,1,1], 2))
     print(sol.subarraySum([1, 2, 3], 3))
+
+# Use a hash table to store prefix sums. If prefix sum - k is already in the hash table then for the indices i it was incremented it, the subarrays from i
+# to the current index have subarray sum = k
+#  
