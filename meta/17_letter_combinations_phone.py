@@ -4,15 +4,15 @@ class Solution:
         digit_letters =  {"2": "abc", "3": "def", "4": "ghi", "5": "jkl", 
                           "6": "mno", "7": "pqrs", "8": "tuv", "9": "wxyz"}
         res = []
-        def backtracking(index = 0, combination = ""):
+        def backtracking(index = 0, combination = []):
             if index == len(digits):
-                res.append(combination)
+                res.append("".join(combination))
                 return
             
-            for i in range(len(digit_letters[digits[index]])):
-                combination += digit_letters[digits[index]][i]
+            for ch in digit_letters[digits[index]]:
+                combination.append(ch)
                 backtracking(index + 1, combination)
-                combination = combination[:-1]
+                combination.pop()
 
         backtracking()
         return res

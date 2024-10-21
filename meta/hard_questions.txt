@@ -16,3 +16,5 @@
 33. Search In Rotated Sorted Array
 408. Valid Word Abbreviation
 42. Trapping Rain Water
+301. Longest Increasing Path in Matrix
+1590. Make Sum Divisible by K

@@ -46,7 +46,8 @@ class Solution:
 
                     if cur.is_end:
                         dp[j] = True
-
+        
+        print(dp)
         return dp[-1]
     
 if __name__ == "__main__":

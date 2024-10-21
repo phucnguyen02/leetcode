@@ -1,15 +1,17 @@
-from collections import Counter
-
 class Solution:
-    def is_integer(self, s):
+    def sign_check(self, s):
         ptr = 0
         sign_count = 0
         while ptr < len(s) and s[ptr] in "+-":
             ptr += 1
             sign_count += 1
-            if sign_count > 1: return False
-        digit = False
+            if sign_count > 1: return (False, -1)
+        return (True, ptr)
 
+    def is_integer(self, s):
+        flag, ptr = self.sign_check(s)
+        if not flag: return False
+        digit = False
         while ptr < len(s):
             if not s[ptr].isdigit(): return False
             ptr += 1
@@ -18,32 +20,25 @@ class Solution:
         return digit
     
     def is_decimal(self, s):
-        if s == ".": return False
-        dot_count = Counter(s)["."]
-        if dot_count > 1: return False
-        ptr = 0
-        sign_count = 0
-        digit = False
-        while ptr < len(s) and s[ptr] in "+-":
-            ptr += 1
-            sign_count += 1
-            if sign_count > 1: return False
+        dot_count = 0
+        flag, ptr = self.sign_check(s)
+        if not flag: return False
 
+        digit = False
         while ptr < len(s):
-            if not s[ptr].isdigit() and s[ptr] != ".": return False
+            if s[ptr] == ".":
+                dot_count += 1
+            elif not s[ptr].isdigit(): return False
             digit = s[ptr].isdigit() or digit
             ptr += 1
         
-        return digit
+        return digit and dot_count == 1
             
     def isNumber(self, s: str) -> bool:
         tokens = s.split("E") if "E" in s else s.split("e")
         if len(tokens) > 2: return False
-        if len(tokens) == 2:
-            left = self.is_decimal(tokens[0]) if "." in tokens[0] else self.is_integer(tokens[0])
-            right = self.is_integer(tokens[1])
-            return left and right
-        return self.is_decimal(tokens[0]) if "." in tokens[0] else self.is_integer(tokens[0])
+        left = self.is_decimal(tokens[0]) if "." in tokens[0] else self.is_integer(tokens[0])
+        return left if len(tokens) == 1 else left and self.is_integer(tokens[1])
     
 if __name__ == "__main__":
     sol = Solution()
