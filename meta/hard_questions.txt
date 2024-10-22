@@ -16,5 +16,11 @@
 33. Search In Rotated Sorted Array
 408. Valid Word Abbreviation
 42. Trapping Rain Water
-301. Longest Increasing Path in Matrix
+301. Remove Invalid Parentheses
+329. Longest Increasing Path in Matrix
 1590. Make Sum Divisible by K
+2406. Divide Intervals Into Min Groups
+4. Median of 2 Sorted Arrays
+10. Regular Expression Matching
+32. Longest Valid Parentheses
+37. Sudoku Solver
