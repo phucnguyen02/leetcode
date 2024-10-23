@@ -24,3 +24,5 @@
 10. Regular Expression Matching
 32. Longest Valid Parentheses
 37. Sudoku Solver
+140. Word Break 2
+1209. Remove All Adjacent Duplicates in String 2
