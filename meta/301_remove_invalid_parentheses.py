@@ -1,8 +1,10 @@
 from collections import defaultdict
+from bisect import bisect_left, bisect_right
 
 class Solution:
     def removeInvalidParentheses(self, s: str):
         count = defaultdict(set)
+        print(bisect_left([2,5], 3), bisect_right([2, 5], 3))
         min_removed = len(s)
         def backtracking(index, stack, word, removed):
             nonlocal min_removed
