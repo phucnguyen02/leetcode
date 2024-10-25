@@ -28,3 +28,6 @@
 1209. Remove All Adjacent Duplicates in String 2
 658. Find K Closest Elements
 93. Restore IP addresses
+114. Flatten Binary Tree To Linked List
+239. Sliding Window Maximum
+394. Decode String
