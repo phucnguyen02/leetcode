@@ -11,6 +11,16 @@ class Solution:
         res = [i for i in range(len(heights)) if i not in bad_indices]
         return res
     
+    def findBuildings(self, heights: List[int]) -> List[int]:
+        cur_max = -1
+        res = []
+        for i in range(len(heights) - 1, -1, -1):
+            if cur_max < heights[i]:
+                cur_max = heights[i]
+                res.append(i)
+
+        return res[::-1]
+    
 if __name__ == "__main__":
     sol = Solution()
     print(sol.findBuildings([4,2,3,1]))
