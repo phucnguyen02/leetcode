@@ -26,12 +26,12 @@ class Solution:
         cur_num = 0
         res = 0
         last_result = 0
-        for ch in s + '+':
+        for (i, ch) in enumerate(s):
             if ch == ' ':
                 continue
             if ch.isdigit():
                 cur_num = cur_num * 10 + int(ch)
-            if not ch.isdigit():
+            if not ch.isdigit() or i == len(s) - 1:
                 print(ch, operation, res, last_result)
                 if operation == '+' or operation == '-':
                     res += last_result

@@ -1,15 +1,20 @@
 from collections import Counter
+import heapq
 
 class Solution:
     def topKFrequent(self, nums, k: int):
         count = Counter(nums)
-        frequencies = [(val, freq) for (freq, val) in count.items()]
-        frequencies.sort(reverse=True)
-        res = []
-        for i in range(k):
-            res.append(frequencies[i][1])
-        return res
-    
+        freq = [(cnt, num) for (num, cnt) in count.items()]
+        heap = []
+        heap = freq[:k]
+        heapq.heapify(heap)
+        
+        for (cnt, num) in freq[k:]:
+            if cnt > heap[0][0]:
+                heapq.heappop(heap)
+                heapq.heappush(heap, (cnt, num))
+
+        return [hp[1] for hp in heap]
 if __name__ == "__main__":
     sol = Solution()
     print(sol.topKFrequent([1,1,1,2,2,3], 2))
