@@ -1,11 +1,11 @@
-from bisect import bisect_left
+from bisect import bisect_left, insort_left
 class Solution:
     def insert(self, intervals, newInterval):
         if not intervals: return [newInterval]
         res = []
-        position = bisect_left(intervals, newInterval)
+        insort_left(intervals, newInterval)
         
-        intervals = intervals[:position] + [newInterval] + intervals[position:]
+        #intervals = intervals[:position] + [newInterval] + intervals[position:]
         for (start, end) in intervals:
             if res and res[-1][1] >= start:
                 res[-1][1] = max(end, res[-1][1])

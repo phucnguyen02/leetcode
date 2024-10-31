@@ -17,8 +17,7 @@ class Solution:
     # def numDecodings(self, s: str) -> int:
     #     n = len(s)
     #     if s[0] == "0": return 0
-    #     if n == 1: return 1
-    #     cur = 0
+    #     cur = 1
     #     prev = 1
     #     prev_2 = 1
     #     for i in range(1, n):

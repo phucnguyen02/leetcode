@@ -25,6 +25,7 @@ class Solution:
         right = len(height) - 1
         res = 0
         while left < right:
+            print(left, right, res, left_max, right_max)
             if left_max <= right_max:
                 left += 1
                 left_max = max(left_max, height[left])
@@ -37,7 +38,7 @@ class Solution:
 
 if __name__ == "__main__":
     sol = Solution()
-    print(sol.trap_dp([0,1,0,2,1,0,1,3,2,1,2,1]))
+    print(sol.trap([0,1,0,2,1,0,1,3,2,1,2,1]))
     #print(sol.trap([7, 0, 3, 0, 5, 0, 6]))
 
 # From the figure in dynamic programming approach, notice that as long as right_max[i]>left_max[i] (from element 0 to 6), the water trapped depends upon the left_max, 
