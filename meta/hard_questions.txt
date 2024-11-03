@@ -38,3 +38,6 @@
 632. Smallest Range Covering K Lists
 1438. Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
 224. Basic Calculator
+142. Linked List Cycle 2
+333. Largest BST Subtree
+152. Maximum Product Subarray
