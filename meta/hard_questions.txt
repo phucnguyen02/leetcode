@@ -45,3 +45,6 @@
 885. Spiral Matrix III
 1344. Angle Between Hands on a Clock
 40. Combination Sum II
+45. Jump Game II
+311. Sparse Matrix Multiplication
+378. Kth Smallest Element in Sorted Matrix
