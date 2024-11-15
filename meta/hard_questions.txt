@@ -48,3 +48,5 @@
 45. Jump Game II
 311. Sparse Matrix Multiplication
 378. Kth Smallest Element in Sorted Matrix
+3133. Minimum Array End
+334. Increasing Triplet Subsequence
