@@ -50,3 +50,8 @@
 378. Kth Smallest Element in Sorted Matrix
 3133. Minimum Array End
 334. Increasing Triplet Subsequence
+2707. Extra Characters in String
+1574. Shortest Subarray to be Removed to Make Array Sorted
+84. Largest Rectangle in Histogram
+296. Best Meeting Point
+29. Divide 2 Integers
